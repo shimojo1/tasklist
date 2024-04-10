@@ -45,4 +45,14 @@ public class TaskListDao {
 		int number = jdbcTemplate.update("DELETE FROM tasklist WHERE id = ?", id);
 		return number;
 	}
+	
+	public int update(TaskItem taskItem) {
+		int number = jdbcTemplate.update(
+				"UPDATE tasklist SET task = ?, deadline = ?, done = ? WHERE id = ?",
+				taskItem.task(),
+				taskItem.deadline(),
+				taskItem.done(),
+				taskItem.id());
+		return number;
+	}
 }

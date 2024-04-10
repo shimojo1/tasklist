@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Tasklist2ApplicationTests {
+class TasklistApplicationTests {
 
 	@Test
 	void contextLoads() {
